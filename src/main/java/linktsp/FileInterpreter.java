@@ -1,5 +1,8 @@
 package linktsp;
 
+import linktsp.util.Point;
+import linktsp.util.Token;
+
 import java.io.*;
 import java.util.*;
 
@@ -7,22 +10,22 @@ import java.util.*;
  * @author Rodolfo Pichardo
  * This class read a file in TSP format and converts it into a list of ids and points
  */
-public class Interpreter {
+public class FileInterpreter {
     /* 
      * Class variables
      */
     private ArrayList<Integer> id;
-    private ArrayList<Point> coordinates; 
+    private ArrayList<Point> coordinates;
 
     /**
      * Constructor:
      * This function takes the name of a file, opens it and parses it
      * @param file The name of the file
      */
-	public Interpreter(File file) {
+	public FileInterpreter(File file) {
         // Initialize the class variables
-        this.id = new ArrayList<Integer>();
-        this.coordinates = new ArrayList<Point>();
+        this.id = new ArrayList<>();
+        this.coordinates = new ArrayList<>();
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(file));
 			String line;

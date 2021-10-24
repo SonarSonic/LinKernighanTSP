@@ -1,18 +1,15 @@
-package linktsp;
+package linktsp.util;
 
 /**
  * This class represents a cartesian 2D point using its x and y coordinates
  */
-class Point {
-    /*
-     * Instance variables
-     */
+public class Point {
 
     // The x coordinate
-    private double x;
+    private final double x;
 
     // The y coordinate
-    private double y;
+    private final double y;
 
     /**
      * This is the constructor that takes both coordinates and creates a point

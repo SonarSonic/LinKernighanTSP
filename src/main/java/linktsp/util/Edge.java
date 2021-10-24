@@ -1,4 +1,4 @@
-package linktsp;
+package linktsp.util;
 
 /**
  * This class is meant for representing the edges, it allows to store

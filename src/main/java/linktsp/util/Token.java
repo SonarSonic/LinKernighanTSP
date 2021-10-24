@@ -1,10 +1,10 @@
-package linktsp;
+package linktsp.util;
 
 /**
  * This class allows us to take a line from a file and parse it
  * to extract the intended variables
  */
-class Token {
+public class Token {
     /*
      * Instance variables
      */
