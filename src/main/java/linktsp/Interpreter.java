@@ -17,7 +17,7 @@ public class Interpreter {
     /**
      * Constructor:
      * This function takes the name of a file, opens it and parses it
-     * @param String The name of the file
+     * @param file The name of the file
      */
 	public Interpreter(File file) {
         // Initialize the class variables
@@ -41,7 +41,7 @@ public class Interpreter {
 
     /**
      * This funtion takes a string and tokenizes it. It expects the string to be have exactly 3 tokens
-     * @param String the string one wants to tokenize
+     * @param line the string one wants to tokenize
      * @return ArrayList<Array> the three tokens extracted.
      *
      * Expects data on this format "[id] [x coordinate] [y coordinate]",
@@ -64,8 +64,7 @@ public class Interpreter {
 
     /**
      * This function adds an id to the array of ids of cities
-     * @param int the id to to be added
-     * @return void
+     * @param id the id to to be added
      */
     private void addId(int id) {
         this.id.add(id);
@@ -73,8 +72,7 @@ public class Interpreter {
 
     /**
      * This function adds an point to the array of coordinates for each city
-     * @param Point the point with the coordinates for that city
-     * @return void
+     * @param pt the point with the coordinates for that city
      */
     private void addPoint(Point pt) {
         this.coordinates.add(pt);

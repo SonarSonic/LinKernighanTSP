@@ -16,8 +16,8 @@ class Point {
 
     /**
      * This is the constructor that takes both coordinates and creates a point
-     * @param double the x coordinates
-     * @param double the y coordinates
+     * @param x the x coordinates
+     * @param y the y coordinates
      */
     public Point(double x, double y) {
         this.x = x;
@@ -26,7 +26,6 @@ class Point {
 
     /**
      * A getter that returns the x coordinates
-     * @param None
      * @return double the x coordinates
      */
     public double getX() {
@@ -35,7 +34,6 @@ class Point {
 
     /**
      * A getter that returns the y coordinates
-     * @param None
      * @return double the y coordinates
      */ 
     public double getY() {

@@ -24,8 +24,8 @@ public class LinKernighan {
     /**
      * Constructor that creates an instance of the Lin-Kerninghan problem without
      * the optimizations. (Basically the tour it has is the drunken sailor)
-     * @param ArrayList<linkernighan.tsp.Point> the coordinates of all the cities
-     * @param ArrayList<Integer> the id of all the cities
+     * @param coordinates the coordinates of all the cities
+     * @param ids the id of all the cities
      */ 
     public LinKernighan(ArrayList<Point> coordinates, ArrayList<Integer> ids) { 
         this.ids = ids;
@@ -38,7 +38,6 @@ public class LinKernighan {
 
     /**
      * This function create a random tour using the dunken sailor algorithm
-     * @param None
      * @return ArrayList<Integer> array with the list of nodes in the tour (sorted)
      */
     private int[] createRandomTour() {
@@ -63,7 +62,6 @@ public class LinKernighan {
 
     /**
      * This functions creates a table with the distances of all the cities
-     * @param None
      * @return double[][] a two dimensional array with all the distances
      */
     private double[][] initDistanceTable() {
@@ -87,7 +85,6 @@ public class LinKernighan {
 
     /**
      * This function returns the current tour distance
-     * @param Nothing
      * @return double the distance of the tour
      */
     public double getDistance() {
@@ -105,8 +102,6 @@ public class LinKernighan {
     /**
      * This function is the crown jewel of this class, it tries to optimize
      * the current tour
-     * @param None
-     * @return void
      */
     public void runAlgorithm() {
         double oldDistance = 0;
@@ -121,8 +116,6 @@ public class LinKernighan {
     
     /**
      * This function tries to improve the tour
-     * @param None
-     * @return void
      */
     public void improve() {
     	//int i = 0;
@@ -134,7 +127,6 @@ public class LinKernighan {
     /**
      * This functions tries to improve by stating from a particular node
      * @param x the reference to the city to start with.
-     * @return void
      */
     public void improve(int x){
     	improve(x, false);
@@ -143,7 +135,6 @@ public class LinKernighan {
     /**
      * This functions attempts to improve the tour by stating from a particular node
      * @param t1 the reference to the city to start with.
-     * @return void
      */
     public void improve(int t1, boolean previous) {
     	int t2 = previous? getPreviousIdx(t1): getNextIdx(t1);
@@ -159,7 +150,7 @@ public class LinKernighan {
     /**
      * This function returns the previous index for the tour, this typically should be x-1
      *  but if x is zero, well, it is the last index.
-     *  @param x the index of the node
+     *  @param index the index of the node
      *  @return the previous index
      */
     public int getPreviousIdx(int index) {
@@ -169,7 +160,7 @@ public class LinKernighan {
     /**
      * This function returns the next index for the tour, this typically should be x+1
      *  but if x is the last index it should wrap to zero
-     *  @param x the index of the node
+     *  @param index the index of the node
      *  @return the next index
      */
     public int getNextIdx(int index) {
@@ -178,7 +169,7 @@ public class LinKernighan {
     
     /**
      * This function returns the nearest neighbor for an specific node
-     * @param the index of the node
+     * @param index index of the node
      * @return the index of the nearest node
      */
     public int getNearestNeighbor(int index) {
@@ -199,8 +190,8 @@ public class LinKernighan {
     
     /**
      * This functions retrieves the distance between two nodes given its indexes
-     * @param int index of the first node
-     * @param int index of the second node
+     * @param n1 index of the first node
+     * @param n2 index of the second node
      * @return double the distance from node 1 to node 2
      */
     public double getDistance(int n1, int n2) {
@@ -313,7 +304,7 @@ public class LinKernighan {
 	/**
      * 
      * @param tIndex
-     * @param i
+     * @param ti
      * @return true if the gain would be positive 
      */
     private boolean isPositiveGain(ArrayList<Integer> tIndex, int ti) {
@@ -538,7 +529,7 @@ public class LinKernighan {
     
     /**
      * This function gets the index of the node given the actual number of the node in the tour
-     * @param the node id
+     * @param node the node id
      * @return the index on the tour
      */
     private int getIndex(int node) {
@@ -554,7 +545,6 @@ public class LinKernighan {
     
     /**
      * This function returns a string with the current tour and its distance
-     * @param None
      * @return String with the representation of the tour
      */
     public String toString() {
