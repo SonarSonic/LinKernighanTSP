@@ -1,6 +1,6 @@
+package linktsp;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class LinKernighan {
@@ -24,7 +24,7 @@ public class LinKernighan {
     /**
      * Constructor that creates an instance of the Lin-Kerninghan problem without
      * the optimizations. (Basically the tour it has is the drunken sailor)
-     * @param ArrayList<Point> the coordinates of all the cities
+     * @param ArrayList<linkernighan.tsp.Point> the coordinates of all the cities
      * @param ArrayList<Integer> the id of all the cities
      */ 
     public LinKernighan(ArrayList<Point> coordinates, ArrayList<Integer> ids) { 

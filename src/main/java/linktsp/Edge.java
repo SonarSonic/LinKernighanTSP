@@ -1,4 +1,4 @@
-import java.util.*;
+package linktsp;
 
 /**
  * This class is meant for representing the edges, it allows to store

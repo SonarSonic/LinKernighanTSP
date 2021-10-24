@@ -1,3 +1,5 @@
+package linktsp;
+
 class NegativeGainException extends RuntimeException {
     public NegativeGainException() {
         super("The negative gain constraint have been violated");

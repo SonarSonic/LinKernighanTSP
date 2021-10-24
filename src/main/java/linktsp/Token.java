@@ -1,3 +1,5 @@
+package linktsp;
+
 /**
  * This class allows us to take a line from a file and parse it
  * to extract the intended variables
@@ -36,7 +38,7 @@ class Token {
     /**
      * Getter that allows us to get the point coordinates of the city
      * @param None
-     * @return Point representing the coordinates of the city
+     * @return linkernighan.tsp.Point representing the coordinates of the city
      */
     public Point getPoint() {
         return this.point;
